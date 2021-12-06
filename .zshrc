@@ -1,8 +1,11 @@
 
 # Clean Prompt
 	# PROMPT="[%n@%m %~]$ "
+	# PROMPT="【%n❭図書館に %d】"
 # Prompt
-	PROMPT="[%F{magenta}%n%f%F{blue}@%f%F{green}%m%f %F{red}%d%f]$ "
+	#PROMPT="[%F{magenta}%n%f%F{blue}@%f%F{green}%m%f %F{red}%d%f]$ "
+	#PROMPT="【%F{magenta}%n%f%F{cyan}が%f%F{magenta}図書館に%f %F{cyan}%d%f】"
+	PROMPT="【%F{magenta}%n%f%F{blue}❭%f%F{magenta}図書館に%f %F{blue}%d%f】"
 	#PROMPT="[%F{magenta}%n%f%F{blue}@%f%F{green}%m%f %F{red}%~%f]$ "
 
 # History
