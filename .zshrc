@@ -19,8 +19,8 @@
 	# NO Beeps
 		unsetopt beep
 	# Set Editor
-		export EDITOR='vim'
-		export VISUAL='vim'
+		export EDITOR='nvim'
+		export VISUAL='nvim'
 	
 	# vi mode
 		bindkey -v
@@ -45,10 +45,11 @@
 		alias lf='/usr/bin/lfrun'
 		alias yewtube='yt'
 		#alias nsxiv='nsxiv-env'
-		alias nn='n -c -a -P p'	
+		alias nn='n -c -a'	
 
 		alias suckless='cd /home/ki11errabbit/Documents/Suckless-Software'		
-
+		#alias cmus='screen -q -r -D cmus || screen -S cmus $(which --skip-alias cmus)'
+		alias cmus='screen -q -r -D cmus || screen -S cmus $(which --skip-alias cmus)'
 
 
 # Basic auto/tab complete:

@@ -9,7 +9,8 @@ if !has('gui_running')
 endif
 
 set cursorline cursorcolumn
-highlight CursorColumn ctermbg=DarkGrey
+highlight CursorColumn ctermbg=Black 
+highlight CursorLine cterm=NONE ctermbg=Black
 
 "-| syntastic settings |-
 set statusline+=%#warningmsg#
@@ -52,6 +53,8 @@ Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ~/.config/kitty/'}
 Plug 'itchyny/calendar.vim'
 Plug 'ervandew/supertab'
 Plug 'ki11errabbit/vim-colemak-dh'
+Plug 'mcchrish/nnn.vim'
+Plug 'Ki11erRabbit/texgroff.vim'
 call plug#end()
 
 " Reload vim-colemak to remap any overridden keys

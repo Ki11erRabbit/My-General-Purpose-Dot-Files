@@ -1,0 +1,17 @@
+add ~/Music
+bind -f common q shell screen -d cmus
+q
+bind -f common q shell screen -d cmusd
+set status_display_program=~/.dwm/blocks-scripts/helper-scripts/cmus-notify
+set continue=true
+bind -f common q shell screen -d cmus-daemon
+shell screen -d cmus
+shell cmus
+bind -f
+bind -f common q shell screen - cmus
+remove
+shell screen - cmus
+add
+pause
+stop
+help
