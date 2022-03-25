@@ -1,0 +1,23 @@
+#!/bin/sh
+
+increaseBright() { 
+	ddccontrol -r 0x10 -W 3 dev:/dev/i2c-8 > /dev/null 
+	ddccontrol -r 0x10 -W 3 dev:/dev/i2c-6 > /dev/null 
+	exit
+}
+
+decreaseBright() { 
+	ddccontrol -r 0x10 -W -3 dev:/dev/i2c-8 > /dev/null 
+	ddccontrol -r 0x10 -W -3 dev:/dev/i2c-6 > /dev/null 
+	exit
+}
+
+case $1 in
+	1) increaseBright;;
+	2) decreaseBright;;
+	3) ddccontrol -r 0x10 -W 3 dev:/dev/i2c-8 > /dev/null;;
+	4) ddccontrol -r 0x10 -W -3 dev:/dev/i2c-8 > /dev/null;;
+	5) ddccontrol -r 0x10 -W 3 dev:/dev/i2c-6 > /dev/null;;
+	6) ddccontrol -r 0x10 -W -3 dev:/dev/i2c-6 > /dev/null;;
+esac
+
