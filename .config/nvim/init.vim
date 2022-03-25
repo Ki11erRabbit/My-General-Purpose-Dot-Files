@@ -27,7 +27,7 @@ let g:lightline = {
       \ }
 
 "-| Syntastic |-
-set statusline+=%#warningmsg#
+set statusline+=%#warningmsg#lambdalisue/suda.vim
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
@@ -87,12 +87,15 @@ Plug 'tpope/vim-fugitive'
 "-| Nicities |-
 Plug 'itchyny/lightline.vim'
 Plug 'psliwka/vim-smoothie'
+Plug 'tpope/vim-commentary'
 "-| Utilities |-
 Plug 'vimwiki/vimwiki'
 Plug 'ki11errabbit/vim-colemak-dh'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'luukvbaal/nnn.nvim'
 Plug 'tpope/vim-eunuch'
+Plug 'lambdalisue/suda.vim'
+Plug 'Ki11erRabbit/texgroff.vim'
 call plug#end()
 
 lua << EOF
