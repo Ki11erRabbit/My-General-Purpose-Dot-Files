@@ -38,7 +38,7 @@ screencast() { \
  	-c:v h264 -crf 0 -preset ultrafast -c:a aac \
 	"$HOME/screencast-$(date '+%y%m%d-%H%M-%S').mp4" &
 	echo $! > /tmp/recordingpid
-	updateicon "⏺️🎙️"
+	updateicon $2
        	}
 
 video() { ffmpeg \
@@ -48,7 +48,7 @@ video() { ffmpeg \
  	-c:v libx264 -qp 0 -r 30 \
 	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
-	updateicon "⏺️"
+	updateicon $2
 	}
 
 whichmonitor() {
@@ -58,15 +58,15 @@ whichmonitor() {
 	choice=$(printf "main\\nboth" | dmenu -i -p "Select monitor")
 	case "$choice" in
 		main)	if $1 = "screencast"; then
-				screencast "${mon1width}x$maxheight"
+				screencast "${mon1width}x$maxheight" "🔴"
 			elif $1 = "video"; then
-				video "${mon1width}x$maxheight"
+				video "${mon1width}x$maxheight" "🔴"
 			fi;;
 
 		both)	if $1 = "screencast"; then
-				screencast "$(xdpyinfo | awk '/dimensions/ {print $2}')"
+				screencast "$(xdpyinfo | awk '/dimensions/ {print $2}')" "🔴🖥️🖥️"
 			elif $1 = "video"; then
-				video "$(xdpyinfo | awk '/dimensions/ {print $2}')"
+				video "$(xdpyinfo | awk '/dimensions/ {print $2}')" "🔴🖥️🖥️"
 			fi;;
 	esac
 
@@ -97,7 +97,7 @@ audio() { \
 	-c:a flac \
 	"$HOME/audio-$(date '+%y%m%d-%H%M-%S').flac" &
 	echo $! > /tmp/recordingpid
-	updateicon "🎙️"
+	updateicon "🔴"
 	}
 
 askrecording() { \
