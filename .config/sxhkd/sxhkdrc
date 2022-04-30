@@ -35,4 +35,20 @@ super + s
 super + {shift +, alt +}s
 	{spectacle --region --background --copy-image,flameshot gui}
 
+# -| Monitor Control -| #
+XF86MonBrightnessUp
+	light -A 5
+	#monbrightcontrol 1 15
 
+XF86MonBrightnessDown
+	light -U 5
+	#monbrightcontrol 1 -15
+
+
+ctrl + {XF86MonBrightnessUp,XF86MonBrightnessDown}
+	#monbrightcontrol 2 {15, -15}
+	light {-A, -U} 5
+
+alt + {XF86MonBrightnessUp,XF86MonBrightnessDown}
+	#monbrightcontrol 3 {15, -15}
+	light {-A, -U} 5
