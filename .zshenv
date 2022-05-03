@@ -3,7 +3,6 @@
 
 #export VISUAL=vim
 export EDITOR="nvim"
-export TERMINAL="kitty"
 export BROWSER="firefox"
 export VIDEO="mpv"
 export SHELL="zsh"
