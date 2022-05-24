@@ -32,7 +32,7 @@
 	# Aliases
 		alias home='cd'
 		alias root='cd /'
-		alias ssh='kitty +kitten ssh'		#fix for kitty terminal ssh
+		#alias ssh='kitty +kitten ssh'		#fix for kitty terminal ssh
 		alias bottom='btm'			#because my brain is small
 		alias btm='btm --color default-light'	#because of my light terminal
 		alias bat='bat --style plain'		#line numbers are useful but useless when copying something
